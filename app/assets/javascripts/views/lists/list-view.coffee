@@ -1,9 +1,11 @@
 class window.ListView extends View
   @content: (list) ->
     @div class: 'list', =>
-      @input value: list.name(), outlet: 'name', change: 'updateName'
-      @ol outlet: 'items'
-      @input outlet: 'newItem', keyup: 'handleNewItemKeyup'
+      @header =>
+        @input value: list.name(), outlet: 'name', change: 'updateName'
+      @section =>
+        @ol outlet: 'items'
+        @input placeholder: 'New Item', class: 'new-item', outlet: 'newItem', keyup: 'handleNewItemKeyup'
 
   initialize: (@list) ->
     @redrawItems()

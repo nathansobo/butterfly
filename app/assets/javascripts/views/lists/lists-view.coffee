@@ -1,8 +1,9 @@
 class window.ListsView extends View
   @content: ->
-    @div =>
-      @div "Lists"
-      @button "New List", click: 'createList'
+    @div class: 'container', =>
+      @header =>
+        @h1 "Lists"
+        @button "New List", click: 'createList'
       @ol class: 'lists', outlet: 'lists'
 
   initialize: ->
