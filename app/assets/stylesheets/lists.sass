@@ -10,9 +10,9 @@ body
   font-family:  "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 
 .container > header
+  +clearfix
   +background-image(linear-gradient(white, lighten($light-gray, 11)))
   border-bottom: 1px solid $light-gray
-  +clearfix
   padding: 6px 12px
 
   h1
@@ -28,6 +28,7 @@ $list-vertical-padding: 4px
 $list-horizontal-padding: 10px
 
 .lists
+  +clearfix
   margin-left: $list-margin
 
   .list
