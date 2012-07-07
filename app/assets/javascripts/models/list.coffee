@@ -4,5 +4,5 @@ class window.List extends Monarch.Record
   @columns
     name: 'string'
 
-  @hasMany 'items'
+  @hasMany('items', orderBy: 'order')
 
